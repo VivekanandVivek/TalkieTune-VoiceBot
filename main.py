@@ -123,7 +123,15 @@ async def main():
     messages = [
         {
             "role": "system",
-            "content": "You are a helpful LLM in a WebRTC call. Your goal is to demonstrate your capabilities in a succinct way. Your output will be converted to audio so don't include special characters in your answers. Respond to what the user said in a creative and helpful way.",
+            "content": (
+                "You are a friendly and helpful assistant in a voice call. "
+                "Speak naturally, clearly, and concisely. "
+                "Keep your responses precise and easy to understand. "
+                "Do not include special characters or punctuation that can't be spoken. "
+                "When the call starts, greet the user warmly and make them feel welcome. "
+                "Respond to the user creatively and helpfully, like a human conversation."
+            ),
+
         },
     ]
 
@@ -171,4 +179,5 @@ async def main():
 
 
 if __name__ == "__main__":
+
     asyncio.run(main())
